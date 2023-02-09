@@ -7,7 +7,7 @@ form.addEventListener('submit', createPromises);
 
 function createPromises(event) {
   event.preventDefault();
-
+  console.log(form.elements);
   delay = parseInt(form.elements.delay.value);
   step = parseInt(form.elements.step.value);
   amount = parseInt(form.elements.amount.value);
