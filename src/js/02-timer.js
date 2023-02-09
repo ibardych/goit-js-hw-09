@@ -44,8 +44,6 @@ function initializeTimer() {
 }
 
 function startTimer() {
-  remainedMilliseconds -= 1000;
-
   if (remainedMilliseconds <= 0) {
     clearInterval(intervalId);
     return;
@@ -57,6 +55,8 @@ function startTimer() {
   hoursEl.textContent = addLeadingZero(hours);
   minutesEl.textContent = addLeadingZero(minutes);
   secondsEl.textContent = addLeadingZero(seconds);
+
+  remainedMilliseconds -= 1000;
 }
 
 function convertMs(ms) {
